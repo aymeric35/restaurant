@@ -1,0 +1,81 @@
+.sec-menu {
+  background-color: var(--neutral-900);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.sec-menu__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.sec-menu__img img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.sec-menu__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.sec-menu__recipe-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sec-menu__recipe-container h3 {
+  margin-bottom: 0.125rem;
+}
+
+.sec-menu__recipe-container p {
+  margin-top: 0.2rem;
+}
+
+.sec-menu__recipe-container div {
+  display: inline-flex;
+  width: 2rem;
+  height: 0.125rem;
+  background-color: var(--primary-500);
+}
+
+.sec-menu__price-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: var(--2xl);
+}
+
+.sec-menu__price-container p {
+  width: max-content;
+}
+
+@media (min-width: 1024px) {
+  .sec-menu__img img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .sec-menu > .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .sec-menu__list {
+    width: 50%;
+  }
+
+  .sec-menu__list:nth-child(odd) {
+    padding-right: 1rem;
+  }
+
+  .sec-menu__list:nth-child(even) {
+    padding-left: 1rem;
+  }
+}

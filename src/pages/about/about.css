@@ -1,0 +1,42 @@
+.sec-about {
+  background-color: var(--neutral-900);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.sec-about .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sec-about h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.sec-about p {
+  text-align: justify;
+}
+
+@media (min-width: 1024px) {
+  .sec-about .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sec-about h2 {
+    padding-bottom: 2rem;
+  }
+
+  .sec-about img {
+    width: 50%;
+    padding-right: 4rem;
+  }
+
+  .sec-about p {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding-left: 4rem;
+  }
+}

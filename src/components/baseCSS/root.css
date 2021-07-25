@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+
+:root {
+  --text: #fafaf9;
+
+  /* font-size */
+  --7xl: 4.5rem;
+  --6xl: 3.75rem;
+  --5xl: 3rem;
+  --4xl: 2.25rem;
+  --3xl: 1.875rem;
+  --2xl: 1.5rem;
+  --xl: 1.25rem;
+  --lg: 1.125rem;
+  --base: 1rem;
+  --sm: 0.875rem;
+
+  /* colors */
+  --neutral-900: #1c1917;
+  --alternate: #121212;
+  --primary-500: #f97316;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-family: Nunito Sans;
+  color: var(--text);
+}
+
+img {
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+  font-family: Nunito Sans;
+}

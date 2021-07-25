@@ -1,6 +1,11 @@
-import './remedy.css';
-import './root.css';
-import './hero.css';
+import './components/baseCSS/remedy.css';
+import './components/baseCSS/root.css';
+import './components/header/header.css';
+import './components/footer/footer.css';
+import './pages/home/home.css';
+import './pages/menu/menu.css';
+import './pages/about/about.css';
+import { menu } from './components/menu/menu';
 
 const init = (() => {
 
@@ -15,3 +20,5 @@ const init = (() => {
 })();
 
 // init.initBody();
+
+menu.toggleMenu();
