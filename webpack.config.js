@@ -7,13 +7,14 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    header: './src/components/header/header.js'
+    header: './src/components/header/header.js',
+    footer: './src/components/footer/footer.js',
+    home: './src/pages/home/home.js'
   },
   devtool: 'eval-source-map',
   devServer: {
     port: 8080,
     contentBase: path.resolve(__dirname, 'dist'),
-    hot: true
   },
   output: {
     filename: '[name].bundle.js',
