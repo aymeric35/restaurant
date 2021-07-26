@@ -1,0 +1,140 @@
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.hero {
+  display: flex;
+  background: url("./hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+  background-color: var(--neutral-900);
+}
+
+.hero h1 {
+  font-family: Nunito Sans;
+  color: var(--text);
+}
+
+.hero__menu {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  padding-left: 14px;
+  padding-bottom: 14px;
+  top: 0;
+  right: 0;
+  height: 4rem;
+  width: 4rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 0 0 0 100%;
+}
+
+.hero__menu-toggle--active {
+  display: block;
+  position: fixed;
+  background-color: var(--neutral-900);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__menu-toggle--active ul {
+  display: flex;
+  height: 100%;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  font-size: var(--3xl);
+  color: var(--text);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__menu-toggle--hidden {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .hero {
+    height: 300px;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+  .hero {
+    height: 375px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .hero {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__menu {
+    display: none;
+  }
+
+  header.hero nav {
+    display: flex;
+    height: fit-content;
+  }
+
+  header.hero nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    font-size: var(--2xl);
+    color: var(--text);
+    padding: 0;
+  }
+
+  .hero__container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .hero__subcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container {
+    max-width: 1024px;
+  }
+
+  .hero {
+    height: 650px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  .hero {
+    background-size: 100%;
+    height: 100vh;
+  }
+}
