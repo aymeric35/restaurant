@@ -1,4 +1,6 @@
+import './header.css';
 import { createElement, content } from "../shared/elementCreator";
+import { menu } from '../menu/navMenu';
 
 const createHeader = (() => {
 
@@ -45,3 +47,5 @@ const createHeader = (() => {
 })();
 
 createHeader.appendHeader();
+menu.toggleMenu();
+menu.switchPage();
