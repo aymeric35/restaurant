@@ -19,10 +19,6 @@ const init = (() => {
     return { body };
 })();
 
-const content = (() => {
-    const id = document.getElementById("content");
-})();
-
 init.body();
 
 // menu.toggleMenu();
