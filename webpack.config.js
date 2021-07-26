@@ -1,25 +1,30 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    header: './src/components/header/header.js'
+  },
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: './dist',
+    port: 8080,
+    contentBase: path.resolve(__dirname, 'dist'),
+    hot: true
   },
   output: {
-    filename: 'main.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
   plugins: [
     new MiniCssExtractPlugin(),
-    // new HtmlWebpackPlugin({
-    //   title: 'Restaurant',
-    // }),
+    new HtmlWebpackPlugin({
+      title: 'Restaurant',
+    }),
   ],
   module: {
     rules: [
