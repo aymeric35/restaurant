@@ -59,6 +59,10 @@
   align-items: center;
 }
 
+nav ul li {
+  cursor: pointer;
+}
+
 .hero__menu-toggle--hidden {
   display: none;
 }
