@@ -1,3 +1,4 @@
+import './footer.css';
 import { createElement, content } from "../shared/elementCreator";
 
 const createFooter = (() => {
