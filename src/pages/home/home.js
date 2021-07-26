@@ -1,13 +1,14 @@
+import './home.css';
 import { createElement, content } from "../../components/shared/elementCreator";
 import Dough from './pate.jpg';
 import Pizza from './pizza.jpg';
 
 const createBody = (() => {
-    const bodyContent = content.id
+    const bodyContent = content.id;
 
     const appendSection1 = () => {
 
-        const section = bodyContent.appendChild(createElement('div'));
+        const section = bodyContent.appendChild(createElement('section'));
         section.classList.add("sec-1")
 
         const container = section.appendChild(createElement('div'));
@@ -31,7 +32,7 @@ const createBody = (() => {
     }
 
     const appendSection2 = () => {
-        const section = bodyContent.appendChild(createElement('div'));
+        const section = bodyContent.appendChild(createElement('section'));
         section.classList.add("sec-2");
 
         const container = section.appendChild(createElement('div'));
@@ -61,3 +62,5 @@ const createBody = (() => {
 
 createBody.appendSection1();
 createBody.appendSection2();
+
+export { createBody };
