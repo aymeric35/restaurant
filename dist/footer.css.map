@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://restaurant/./src/components/footer/footer.css"],"names":[],"mappings":"AAAA,OACE,qBAAsB,CACtB,aACF,CAEA,kBACE,YAAa,CACb,sBACF","file":"footer.css","sourcesContent":["footer {\r\n  background-color: #000;\r\n  height: 3.5rem;\r\n}\r\n\r\nfooter .container {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n"],"sourceRoot":""}

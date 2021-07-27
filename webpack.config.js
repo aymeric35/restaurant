@@ -4,14 +4,14 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
     index: './src/index.js',
     header: './src/components/header/header.js',
     footer: './src/components/footer/footer.js',
     home: './src/pages/home/home.js'
   },
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   devServer: {
     port: 8080,
     contentBase: path.resolve(__dirname, 'dist'),
@@ -22,7 +22,10 @@ module.exports = {
     clean: true,
   },
   plugins: [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css",
+    }),
     new HtmlWebpackPlugin({
       title: 'Restaurant',
     }),
@@ -31,7 +34,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
