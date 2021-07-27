@@ -8,16 +8,16 @@ const menuList = (() => {
         return { name, ingredients, price };
     }
 
-    const marguerita = Recipe('Marguerita', 'Sauce tomate, Fromage, Olives', '6,00 €');
-    const prima = Recipe('Prima', 'Sauce tomate, Fromage, Jambon', '6,00 €');
-    const reine = Recipe('Reine', 'Sauce tomate, Fromage, Jambon, champignons', '7,00 €');
-    const romaine = Recipe('Romaine', 'Sauce tomate, Fromage, Jambon, Œuf, Crème fraîche', '7,50 €');
-    const quatreFromages = Recipe('4 Fromages', 'Sauce tomate, Chèvre, Bleu, Emmental, Fromage', '8,00 €');
-    const oceane = Recipe('Océane', 'Sauce tomate, Noix de Saint-Jacques, Crevettes', '8,50€');
-    const flamiche = Recipe('Flamiche', 'Crème Fraîche, Oignons, Lardons, Fromage', '9,00 €');
-    const quatreSaisons = Recipe('4 Saisons', "Sauce tomate, Jambon épaule, Fonds d'Artichauts, Champignons", '9,50 €');
-    const brestoise = Recipe('Brestoire', 'Sauce tomate, Oignons, Pommes de Terre, Lardons, Jambon Cru', '9,50€');
-    const bretonne = Recipe('Bretonne', 'Sauce tomate, Oignons, Andouille, Fromage, Crème fraîche', '9,50€');
+    const marguerita = Recipe('Marguerita', ["Sauce tomate", " Fromage", " Olives"], '6,00 €');
+    const prima = Recipe('Prima',  ["Sauce tomate", " Fromage", " Jambon"], '6,00 €');
+    const reine = Recipe('Reine', ["Sauce tomate", " Fromage", " Jambon", " champignons"], '7,00 €');
+    const romaine = Recipe('Romaine', ["Sauce tomate", " Fromage", " Jambon", " Œuf", " Crème fraîche"], '7,50 €');
+    const quatreFromages = Recipe('4 Fromages', ["Sauce tomate", " Chèvre", " Bleu", " Emmental", " Fromage"], '8,00 €');
+    const oceane = Recipe('Océane', ["Sauce tomate", " Noix de Saint-Jacques", " Crevettes"], '8,50 €');
+    const flamiche = Recipe('Flamiche', ["Crème Fraîche", " Oignons", " Lardons", " Fromage"], '9,00 €');
+    const quatreSaisons = Recipe('4 Saisons', ["Sauce tomate", " Jambon épaule", " Fonds d'Artichauts", " Champignons"], '9,50 €');
+    const brestoise = Recipe('Brestoire', ["Sauce tomate", " Oignons", " Pommes de Terre", " Lardons", " Jambon Cru"], '9,50 €');
+    const bretonne = Recipe('Bretonne', ["Sauce tomate", " Oignons", " Andouille", " Fromage", " Crème fraîche"], '9,50 €');
 
     const generate = () => {
         const listHolder = document.querySelector(".list-holder");
