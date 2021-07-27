@@ -60,7 +60,4 @@ const createBody = (() => {
     return { appendSection1, appendSection2 };
 })();
 
-createBody.appendSection1();
-createBody.appendSection2();
-
 export { createBody };

@@ -56,3 +56,6 @@ const menu = (() => {
 })();
 
 export { menu }
+
+createBody.appendSection1();
+createBody.appendSection2();
