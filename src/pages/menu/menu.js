@@ -9,7 +9,7 @@ const menuList = (() => {
     }
 
     const marguerita = Recipe('Marguerita', ["Sauce tomate", " Fromage", " Olives"], '6,00 €');
-    const prima = Recipe('Prima',  ["Sauce tomate", " Fromage", " Jambon"], '6,00 €');
+    const prima = Recipe('Prima', ["Sauce tomate", " Fromage", " Jambon"], '6,00 €');
     const reine = Recipe('Reine', ["Sauce tomate", " Fromage", " Jambon", " champignons"], '7,00 €');
     const romaine = Recipe('Romaine', ["Sauce tomate", " Fromage", " Jambon", " Œuf", " Crème fraîche"], '7,50 €');
     const quatreFromages = Recipe('4 Fromages', ["Sauce tomate", " Chèvre", " Bleu", " Emmental", " Fromage"], '8,00 €');
@@ -24,25 +24,35 @@ const menuList = (() => {
         const recipes = [marguerita, prima, reine, romaine, quatreFromages, oceane, flamiche, quatreSaisons, brestoise, bretonne];
 
         recipes.forEach(recipe => {
-            const container = listHolder.appendChild(createElement('div'));
+            const container = createElement('div');
             container.classList.add("sec-menu__list");
+            listHolder.appendChild(container);
 
-            const recipeContainer = container.appendChild(createElement('div'));
+            const recipeContainer = createElement('div')
             recipeContainer.classList.add("sec-menu__recipe-container");
+            container.appendChild(recipeContainer);
 
-            const title = recipeContainer.appendChild(createElement('h3'));
+            const title = createElement('h3');
             title.classList.add("sec-menu__recipe-title");
             title.textContent = recipe.name;
-            const border = recipeContainer.appendChild(createElement('div'));
+            recipeContainer.appendChild(title);
+
+            const border = createElement('div');
             border.classList.add("border");
-            const ingredients = recipeContainer.appendChild(createElement('p'));
+            recipeContainer.appendChild(border);
+
+            const ingredients = createElement('p');
             ingredients.classList.add("sec-menu__recipe-ingredients")
             ingredients.textContent = recipe.ingredients;
+            recipeContainer.appendChild(ingredients);
 
-            const priceContainer = container.appendChild(createElement('div'));
+            const priceContainer = createElement('div');
             priceContainer.classList.add("sec-menu__price-container");
-            const price = priceContainer.appendChild(createElement('p'));
+            container.appendChild(priceContainer);
+
+            const price = createElement('p')
             price.textContent = recipe.price;
+            priceContainer.appendChild(price);
 
         })
     }
@@ -54,23 +64,29 @@ export const createMenu = (() => {
     const bodyContent = content.id;
 
     const appendSection = () => {
-        const section = bodyContent.appendChild(createElement('section'));
-        section.classList.add("sec-menu")
+        const section = createElement('section');
+        section.classList.add("sec-menu");
+        bodyContent.appendChild(section);
 
-        const container = section.appendChild(createElement('div'));
+        const container = createElement('div');
         container.classList.add("container", "sec-menu__content");
+        section.appendChild(container);
 
-        const h2 = container.appendChild(createElement('h2'));
+        const h2 = createElement('h2');
         h2.textContent = "Menu";
+        container.appendChild(h2);
 
-        const imgContainer = container.appendChild(createElement('div'));
+        const imgContainer = createElement('div');
         imgContainer.classList.add("sec-menu__img");
+        container.appendChild(imgContainer);
 
-        const img = imgContainer.appendChild(createElement('img'));
+        const img = createElement('img');
         img.src = Menu;
+        imgContainer.appendChild(img);
 
-        const menuContainer = section.appendChild(createElement('div'));
+        const menuContainer = createElement('div');
         menuContainer.classList.add("container", "list-holder");
+        section.appendChild(menuContainer);
 
         menuList.generate();
     }
