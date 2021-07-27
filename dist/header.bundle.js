@@ -424,21 +424,26 @@ home_home/* createBody.appendSection2 */.c.appendSection2();
 const createHeader = (() => {
 
     const appendHeader = () => {
-        const headerDOM = document.body.insertBefore((0,elementCreator/* createElement */.a)('header'), elementCreator/* content.id */.k.id);
+        const headerDOM = (0,elementCreator/* createElement */.a)('header');
         headerDOM.classList.add("hero");
+        document.body.insertBefore(headerDOM, elementCreator/* content.id */.k.id);
 
-        const heroContainer = headerDOM.appendChild((0,elementCreator/* createElement */.a)('div'));
+        const heroContainer = (0,elementCreator/* createElement */.a)('div');
         heroContainer.classList.add("hero__container");
+        headerDOM.appendChild(heroContainer);
 
-        const heroSubContainer = heroContainer.appendChild((0,elementCreator/* createElement */.a)('div'));
+        const heroSubContainer = (0,elementCreator/* createElement */.a)('div');
         heroSubContainer.classList.add("container", "hero__subcontainer");
+        heroContainer.appendChild(heroSubContainer);
 
-        const h1 = heroSubContainer.appendChild((0,elementCreator/* createElement */.a)('h1'));
+        const h1 = (0,elementCreator/* createElement */.a)('h1');
         h1.textContent = 'Breizh Pizza';
+        heroSubContainer.appendChild(h1);
 
-        const menu = heroSubContainer.appendChild((0,elementCreator/* createElement */.a)('div'));
+        const menu = (0,elementCreator/* createElement */.a)('div');
         menu.id = "menu";
         menu.classList.add("hero__menu");
+        heroSubContainer.appendChild(menu);
 
         menu.insertAdjacentHTML('afterBegin',
         `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -446,21 +451,21 @@ const createHeader = (() => {
             stroke-linejoin="round" />
         </svg>`);
 
-        const nav = heroSubContainer.appendChild((0,elementCreator/* createElement */.a)('nav'));
+        const nav = (0,elementCreator/* createElement */.a)('nav');
         nav.classList.add("hero__menu-toggle--hidden");
-        const ul = nav.appendChild((0,elementCreator/* createElement */.a)('ul'));
-        const li = ul.append(
-            (0,elementCreator/* createElement */.a)('li'),
-            (0,elementCreator/* createElement */.a)('li'),
-            (0,elementCreator/* createElement */.a)('li')
-        );
-        document.querySelector('li:nth-child(1)').textContent = "Accueil";
-        document.querySelector('li:nth-child(2)').textContent = "Menu";
-        document.querySelector('li:nth-child(3)').textContent = "À Propos";
+        heroSubContainer.appendChild(nav);
+
+        const ul = (0,elementCreator/* createElement */.a)('ul');
+        nav.appendChild(ul);
+        const liHome = (0,elementCreator/* createElement */.a)('li');
+        const liMenu = (0,elementCreator/* createElement */.a)('li');
+        const liAbout = (0,elementCreator/* createElement */.a)('li');
+        ul.append( liHome, liMenu, liAbout);
+        liHome.textContent = "Accueil";
+        liMenu.textContent = "Menu";
+        liAbout.textContent = "À Propos";
 
     }
-
-
 
     return { appendHeader };
 })();
